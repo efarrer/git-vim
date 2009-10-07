@@ -197,6 +197,16 @@ function! GitGrep(args)
   grep args
 endfunction
 
+function! GitSvnRebase()
+    let git_output = s:SystemGit('svn rebase')
+    call <SID>OpenGitBuffer(git_output)
+endfunction
+
+function! GitSvnDcommit()
+    let git_output = s:SystemGit('svn dcommit')
+    call <SID>OpenGitBuffer(git_output)
+endfunction
+
 " Show revision and author for each line.
 function! GitBlame()
     let git_output = s:SystemGit('blame -- ' . expand('%'))
@@ -359,3 +369,6 @@ command! -nargs=* GitPull             call GitPull(<q-args>)
 command!          GitPullRebase       call GitPull('--rebase')
 command! -nargs=* GitPush             call GitPush(<q-args>)
 command! -nargs=* GitGrep             call GitGrep(<q-args>)
+command!          GitSvnRebase        call GitSvnRebase()
+command!          GitSvnDcommit       call GitSvnDcommit()
+
