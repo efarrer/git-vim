@@ -191,6 +191,12 @@ function! GitCatFile(file)
     call <SID>OpenGitBuffer(git_output)
 endfunction
 
+" use git-grep
+function! GitGrep(args)
+  setlocal grepprg=git\ grep\ -n\ $*
+  grep args
+endfunction
+
 " Show revision and author for each line.
 function! GitBlame()
     let git_output = s:SystemGit('blame -- ' . expand('%'))
@@ -352,3 +358,4 @@ command!          GitVimDiffMergeDone call GitVimDiffMergeDone()
 command! -nargs=* GitPull             call GitPull(<q-args>)
 command!          GitPullRebase       call GitPull('--rebase')
 command! -nargs=* GitPush             call GitPush(<q-args>)
+command! -nargs=* GitGrep             call GitGrep(<q-args>)
