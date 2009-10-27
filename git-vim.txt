@@ -1,0 +1,78 @@
+*git-vim.txt* Git plugin for Vim
+
+= git.vim
+
+See Original at http://github.com/motemen/git-vim/tree/master.
+
+====================================================================
+CONTENTS                                          *git-vim-contents*
+
+Introduction       |git-vim-introduction|
+Commands           |git-vim-commands|
+Keymaps            |git-vim-keymaps|
+ToDo               |git-vim-todo|
+
+====================================================================
+INTRODUCTION                                  *git-vim-Introduction*
+
+Git-vim provides:
+* Plugin files for calling git functions from inside Vim
+* Syntax files for git displays
+
+====================================================================
+COMMANDS                                          *git-vim-commands*
+
+GitAdd <file>                                               *GitAdd*
+   git-add <file> or current file if not specified.
+GitCommit <args>                                         *GItCommit*
+   git-commit.
+GitStatus                                                *GitStatus*
+   Show git-status of current file or repository.
+GitLog                                                      *GItLog*
+   Show git-log of current file or repository.
+GitCheckout <args>                                     *GitCheckout*
+   git-checkout. Completes git commits.
+GitDiff <args>                                             *GitDiff*
+   git-diff. Completes git commits.
+GitPull <args>                                             *GitPull*
+   git-pull.
+GitPullRebase                                        *GitPullRebase*
+   git-pull --rebase.
+GitPush <args>                                             *GitPush*
+   git-push. Defaults to +git push origin <current-branch>+.
+GitCatFile <args>                                       *GitCatFile*
+   git-cat-file.
+Git <args>                                                     *Git*
+   Does any git command.
+GitVimDiffMerge                                    *GitVimDiffMerge*
+   Experimental.
+   Call this command on unmerged file to enter vimdiff mode.
+GitVimDiffMergeDone                            *GitVimDiffMergeDone*
+   Call this command after merging.
+
+====================================================================
+KEYMAPS                                            *git-vim-keymaps*
+
+<Leader>gd  GitDiff
+<Leader>gD :GitDiff --cached
+<Leader>gs :GitStatus
+<Leader>gl :GitLog
+<Leader>ga :GitAdd
+<Leader>gA :GitAdd <cfile>
+<Leader>gc :GitCommit
+
+=== In git-status buffer
+[<Enter>]    :GitAdd <cfile>
+
+
+====================================================================
+TODO                                                  *git-vim-todo*
+
+My ToDos (@mootoh)
+
+- make a shortcut for 'git log -p'
+- use diff syntax for 'git log -p'
+- fork to work on them
+
+====================================================================
+ vim:set ft=help:
