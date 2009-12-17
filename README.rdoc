@@ -34,6 +34,8 @@ Git-vim provides:
 [<Leader>gR] :GitRm <cfile>
 [<Leader>gc] :GitCommit
 [<Leader>gb] :GitBlame
+[<Leader>gp] :GitPullRebase
+[<Leader>gg] :GitGrep -e
 
 == License
 The MIT License
