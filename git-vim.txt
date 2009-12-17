@@ -59,7 +59,12 @@ KEYMAPS                                            *git-vim-keymaps*
 <Leader>gl :GitLog
 <Leader>ga :GitAdd
 <Leader>gA :GitAdd <cfile>
+<Leader>gr :GitRm
+<Leader>gR :GitRm <cfile>
 <Leader>gc :GitCommit
+<Leader>gb :GitBlame
+<Leader>gp :GitPullRebase
+<Leader>gg :GitGrep -e
 
 === In git-status buffer
 [<Enter>]    :GitAdd <cfile>
