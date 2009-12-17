@@ -22,20 +22,24 @@ Git-vim provides:
 [:GitVimDiff <rev>]    Enter vimdiff with another revision of the current file. Revision defaults to HEAD if not specified.
 [:GitVimDiffMerge]     Experimental. Call this command on unmerged file to enter vimdiff mode.
 [:GitVimDiffMergeDone] Call this command after merging.
+[:GitSvnRebase]        git-svn rebase.
+[:GitSvnDcommit]       git-svn dcommit.
 
 == Keymaps
-[<Leader>gd] :GitDiff
-[<Leader>gD] :GitDiff --cached
-[<Leader>gs] :GitStatus
-[<Leader>gl] :GitLog
-[<Leader>ga] :GitAdd
-[<Leader>gA] :GitAdd <cfile>
-[<Leader>gr] :GitRm
-[<Leader>gR] :GitRm <cfile>
-[<Leader>gc] :GitCommit
-[<Leader>gb] :GitBlame
-[<Leader>gp] :GitPullRebase
-[<Leader>gg] :GitGrep -e
+[<Leader>gd]  :GitDiff
+[<Leader>gD]  :GitDiff --cached
+[<Leader>gs]  :GitStatus
+[<Leader>gl]  :GitLog
+[<Leader>ga]  :GitAdd
+[<Leader>gA]  :GitAdd <cfile>
+[<Leader>gr]  :GitRm
+[<Leader>gR]  :GitRm <cfile>
+[<Leader>gc]  :GitCommit
+[<Leader>gb]  :GitBlame
+[<Leader>gp]  :GitPullRebase
+[<Leader>gg]  :GitGrep -e
+[<Leader>gsr] :GitSvnRebase
+[<Leader>gsd] :GitSvnDcommit
 
 == License
 The MIT License

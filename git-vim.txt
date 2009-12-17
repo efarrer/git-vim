@@ -49,6 +49,10 @@ GitVimDiffMerge                                    *GitVimDiffMerge*
    Call this command on unmerged file to enter vimdiff mode.
 GitVimDiffMergeDone                            *GitVimDiffMergeDone*
    Call this command after merging.
+GitSvnRebase                                          *GitSvnRebase*
+   git-svn rebase
+GitSvnDcommit                                         *GitSvnDcommit*
+   git-svn dcommit
 
 ====================================================================
 KEYMAPS                                            *git-vim-keymaps*
@@ -65,6 +69,8 @@ KEYMAPS                                            *git-vim-keymaps*
 <Leader>gb :GitBlame
 <Leader>gp :GitPullRebase
 <Leader>gg :GitGrep -e
+<Leader>gsr :GitSvnRebase
+<Leader>gsd :GitSvnDcommit
 
 === In git-status buffer
 [<Enter>]    :GitAdd <cfile>

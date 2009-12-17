@@ -27,18 +27,20 @@ if !exists('g:git_status_show_options')
 endif
 
 if !exists('g:git_no_map_default') || !g:git_no_map_default
-    nnoremap <Leader>gd :GitDiff<Enter>
-    nnoremap <Leader>gD :GitDiff --cached<Enter>
-    nnoremap <Leader>gs :GitStatus<Enter>
-    nnoremap <Leader>gl :GitLog<Enter>
-    nnoremap <Leader>ga :GitAdd<Enter>
-    nnoremap <Leader>gA :GitAdd <cfile><Enter>
-    nnoremap <Leader>gr :GitRm<Enter>
-    nnoremap <Leader>gR :GitRm <cfile><Enter>
-    nnoremap <Leader>gc :GitCommit<Enter>
-    nnoremap <Leader>gb :GitBlame<Enter>
-    nnoremap <Leader>gp :GitPullRebase<Enter>
-    nnoremap <Leader>gg :GitGrep -e '<C-R>=getreg('/')<Enter>'<Enter>
+    nnoremap <Leader>gd  :GitDiff<Enter>
+    nnoremap <Leader>gD  :GitDiff --cached<Enter>
+    nnoremap <Leader>gs  :GitStatus<Enter>
+    nnoremap <Leader>gl  :GitLog<Enter>
+    nnoremap <Leader>ga  :GitAdd<Enter>
+    nnoremap <Leader>gA  :GitAdd <cfile><Enter>
+    nnoremap <Leader>gr  :GitRm<Enter>
+    nnoremap <Leader>gR  :GitRm <cfile><Enter>
+    nnoremap <Leader>gc  :GitCommit<Enter>
+    nnoremap <Leader>gb  :GitBlame<Enter>
+    nnoremap <Leader>gp  :GitPullRebase<Enter>
+    nnoremap <Leader>gg  :GitGrep -e '<C-R>=getreg('/')<Enter>'<Enter>
+    nnoremap <Leader>gsr :GitSvnRebase<Enter>
+    nnoremap <Leader>gsd :GitSvnDcommit<Enter>
 endif
 
 " Ensure b:git_dir exists.
